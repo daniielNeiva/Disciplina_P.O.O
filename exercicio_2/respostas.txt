@@ -1,0 +1,56 @@
+1)
+1-(F) Objetos são modelos para classes. (Falso)
+Essa afirmação está invertida. As classes são modelos para objetos. Os objetos são instâncias das classes.
+
+2-(F) Atributos de uma classe devem ser obrigatoriamente inicializados para que as classes compilem. (Falso)
+Os atributos de uma classe não precisam ser obrigatoriamente inicializados. Eles podem ter valores padrão ou
+ serem inicializados no construtor, mas não é obrigatório para a compilação.
+
+3(F) Uma variável declarada dentro de um método deve ser inicializada para que a classe seja compilável. (Falso)
+Variáveis locais dentro de métodos não precisam ser inicializadas explicitamente para que a classe compile.
+ No entanto, você deve atribuir um valor antes de usá-las para evitar erros em tempo de execução.
+
+
+4-(V) Uma variável que seja uma classe declarada em um método é automaticamente inicializada com undefined. (Verdadeiro)
+Quando você declara uma variável de classe em um método, ela é inicializada automaticamente com o valor undefined até
+ que você atribua um objeto a ela.
+
+5-(V) Construtores são rotinas especiais que servem para inicializar e configurar os objetos no momento da
+ instanciação. (Verdadeiro)
+Construtores são métodos especiais em uma classe que são chamados automaticamente quando você cria uma 
+instância da classe. Eles são usados para inicializar os atributos do objeto e configurar seu estado
+ inicial.
+
+6-(V) Construtores não possuem tipo de retorno e podem ou não ter parâmetros. (Verdadeiro)
+Construtores não possuem um tipo de retorno especificado, e eles podem ou não ter parâmetros, dependendo das
+ necessidades da classe.
+
+7-(V) Uma classe pode ter várias instâncias. (Verdadeiro)
+Sim, uma classe pode ser usada para criar várias instâncias (objetos) diferentes. Cada instância é 
+independente das outras e pode ter seu próprio estado e comportamento.
+
+
+2) Não haverá problemas na inicialização, a variável será inicializada como undefined, para ser incrementado
+a variável teria que ser inicializada com um valor opcional 0.
+
+3) código 
+4) código
+
+5) 
+let c1: Conta = new Conta("1",100);
+let c2: Conta = new Conta("2",100);
+let c3: Conta;
+c1 = c2;
+c3 = c1;
+c1.sacar(10);
+c1.transferir(c2,50);
+console.log(c1.consultarSaldo());
+console.log(c2.consultarSaldo());
+console.log(c3.consultarSaldo());
+
+A) c1 = 150
+   c2 = 150
+   c3 = 150
+   pois, c1 está apontando para a mesma referência do c2 e o c3 está apontando para a referência do c1 
+
+b) teria que ser desalocado da memória, pois perdeu a sua referência.   
